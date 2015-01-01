@@ -1,0 +1,18 @@
+<div data-role="page" data-url="<%= Rho::Application.startURI %>/">
+
+    
+  <div data-role="header" data-position="inline">
+    <h1>EssaiJs</h1>
+
+  </div>
+
+  <div id='texte'>Initial text</div>
+  
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><a href="<%= url_for :controller => :Model001, :action => :index %>" data-transition="slide">To another page</a></li>
+    </ul>
+  </div>
+
+  <button type="button" onclick="helloWorld()">Click Me!</button> 
+</div>

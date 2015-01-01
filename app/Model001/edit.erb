@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @model001.Titre %></h1>
+    <a href="<%= url_for :action => :show, :id => @model001.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @model001.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @model001.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="model001[Titre]" class="fieldLabel">Titre</label>
+            <input type="text" id="model001[Titre]" name="model001[Titre]" value="<%= @model001.Titre %>" <%= placeholder( "Titre" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="model001[Nom]" class="fieldLabel">Nom</label>
+            <input type="text" id="model001[Nom]" name="model001[Nom]" value="<%= @model001.Nom %>" <%= placeholder( "Nom" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>
